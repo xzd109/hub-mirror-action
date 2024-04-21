@@ -29,8 +29,8 @@ jobs:
       # 引用发行版的主要版本
       uses: actions/cache@v1
       with:
-        path: /home/runner/work/phpdragon/phpdragon-cache
-        key: ${{ runner.os }}-phpdragon-repos-cache
+        path: /home/runner/work/xzd109/xzd109-cache
+        key: ${{ runner.os }}-xzd109-repos-cache
 
     - name: Mirror the Github organization repos to Gitee.
       # 引用master分支的脚本支持
@@ -46,7 +46,7 @@ jobs:
         dst_token: ${{ secrets.GITEE_PRIVATE_TOKEN }}
         account_type: user
         # 指定目录cache
-        cache_path: /github/workspace/phpdragon-cache
+        cache_path: /github/workspace/xzd109-cache
         # 白名单，仅同步白名单中的repos，如“repo1,repo2,repo3”
         white_list: "hub-mirror-action,mytestcode"
         # 仅同步静态列表，不会再动态获取需同步列表（黑白名单机制依旧生效）
